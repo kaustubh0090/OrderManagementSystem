@@ -14,7 +14,7 @@ public class CustomerEntity implements Serializable {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private long customerid;
 
 	@Column(nullable = false)
 	private String firstname;
@@ -28,12 +28,12 @@ public class CustomerEntity implements Serializable {
 	@Column(nullable = false)
 	private String password;
 
-	public long getId() {
-		return id;
+	public long getCustomerid() {
+		return customerid;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCustomerid(long customerid) {
+		this.customerid = customerid;
 	}
 
 	public String getFirstname() {

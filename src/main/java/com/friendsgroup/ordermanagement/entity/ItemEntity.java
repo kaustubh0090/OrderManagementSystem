@@ -10,9 +10,6 @@ import javax.persistence.Id;
 @Entity(name = "item")
 public class ItemEntity implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4627494388903011325L;
 
 	@Id
@@ -23,7 +20,7 @@ public class ItemEntity implements Serializable {
 	private String itemname;
 
 	@Column(nullable = false)
-	private String itemprice;
+	private long itemprice;
 
 	public long getItemid() {
 		return itemid;
@@ -41,11 +38,11 @@ public class ItemEntity implements Serializable {
 		this.itemname = itemname;
 	}
 
-	public String getItemprice() {
+	public long getItemprice() {
 		return itemprice;
 	}
 
-	public void setItemprice(String itemprice) {
+	public void setItemprice(long itemprice) {
 		this.itemprice = itemprice;
 	}
 
