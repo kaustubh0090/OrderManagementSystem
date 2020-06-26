@@ -2,53 +2,67 @@ package com.friendsgroup.ordermanagement.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "orderItemMap")
 public class OrderItemMapEntity {
 
-	@Column
-	private long orderid;
+	@Id
+	@GeneratedValue
+	private Long id;
 
 	@Column
-	private long itemid;
+	private Long orderid;
 
 	@Column
-	private long quantity;
+	private Long itemid;
 
 	@Column
-	private long price;
+	private Long quantity;
 
-	public long getOrderid() {
+	@Column
+	private Long price;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getOrderid() {
 		return orderid;
 	}
 
-	public void setOrderid(long orderid) {
+	public void setOrderid(Long orderid) {
 		this.orderid = orderid;
 	}
 
-	public long getItemid() {
+	public Long getItemid() {
 		return itemid;
 	}
 
-	public void setItemid(long itemid) {
+	public void setItemid(Long itemid) {
 		this.itemid = itemid;
 	}
 
-	public long getQuantity() {
+	public Long getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(long quantity) {
+	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 
-	public long getPrice() {
+	public Long getPrice() {
 		return price;
 	}
 
-	public void setPrice(long price) {
+	public void setPrice(Long price) {
 		this.price = price;
 	}
 

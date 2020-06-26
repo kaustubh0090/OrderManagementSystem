@@ -2,15 +2,15 @@ package com.friendsgroup.ordermanagement.dto;
 
 public class ItemDto {
 
-	private long itemid;
+	private Long itemid;
 	private String itemname;
 	private String itemprice;
 
-	public long getItemid() {
+	public Long getItemid() {
 		return itemid;
 	}
 
-	public void setItemid(long itemid) {
+	public void setItemid(Long itemid) {
 		this.itemid = itemid;
 	}
 

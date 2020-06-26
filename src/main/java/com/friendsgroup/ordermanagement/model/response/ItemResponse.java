@@ -1,29 +1,10 @@
-package com.friendsgroup.ordermanagement.entity;
+package com.friendsgroup.ordermanagement.model.response;
 
-import java.io.Serializable;
+public class ItemResponse {
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity(name = "item")
-public class ItemEntity implements Serializable {
-
-	private static final long serialVersionUID = 4627494388903011325L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long itemid;
-
-	@Column(nullable = false)
 	private String itemname;
-
-	@Column(nullable = false)
 	private Long itemprice;
-
-	@Column(nullable = false)
 	private Long itemquantity;
 
 	public Long getItemid() {

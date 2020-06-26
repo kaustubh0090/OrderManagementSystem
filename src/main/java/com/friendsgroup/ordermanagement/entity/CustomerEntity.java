@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "customer")
@@ -13,8 +14,8 @@ public class CustomerEntity implements Serializable {
 	private static final long serialVersionUID = 6491116122903725378L;
 
 	@Id
-	@GeneratedValue
-	private long customerid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long customerid;
 
 	@Column(nullable = false)
 	private String firstname;
@@ -28,11 +29,11 @@ public class CustomerEntity implements Serializable {
 	@Column(nullable = false)
 	private String password;
 
-	public long getCustomerid() {
+	public Long getCustomerid() {
 		return customerid;
 	}
 
-	public void setCustomerid(long customerid) {
+	public void setCustomerid(Long customerid) {
 		this.customerid = customerid;
 	}
 

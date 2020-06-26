@@ -27,6 +27,8 @@ public class CustomerController {
 		CustomerDto dto = new CustomerDto();
 		BeanUtils.copyProperties(customerdetails, dto);
 
+	
+		
 		CustomerDto createcustomer = customerService.createCustomer(dto);
 		BeanUtils.copyProperties(createcustomer, returnvalue);
 

@@ -1,9 +1,13 @@
 package com.friendsgroup.ordermanagement.model.request;
 
-public class ItemRequest {
+import java.io.Serializable;
+
+public class ItemRequest   {
+
 
 	private String itemname;
-	private String itemprice;
+	private Long itemprice;
+	private Long itemquantity;
 
 	public String getItemname() {
 		return itemname;
@@ -13,12 +17,20 @@ public class ItemRequest {
 		this.itemname = itemname;
 	}
 
-	public String getItemprice() {
+	public Long getItemprice() {
 		return itemprice;
 	}
 
-	public void setItemprice(String itemprice) {
+	public void setItemprice(Long itemprice) {
 		this.itemprice = itemprice;
+	}
+
+	public Long getItemquantity() {
+		return itemquantity;
+	}
+
+	public void setItemquantity(Long itemquantity) {
+		this.itemquantity = itemquantity;
 	}
 
 }

@@ -8,4 +8,6 @@ public interface OrderService {
 
 	OrderDto createOrder(OrderDto orderdto);
 
+	OrderDto updateorder(Long orderid,OrderDto orderdto);
+
 }
